@@ -16,10 +16,9 @@ function HomeModel({
         url?: string
     ) => void;
 }) {
-    const { scene } = useGLTF(
-    "https://pub-4b3768801bbc42e0bae195a2bd2b94aa.r2.dev/home2.glb"
-);
+    const { scene } = useGLTF("/models/home2.glb");
 
+    
     const laptop = scene.getObjectByName("laptop");
     const text = laptop?.getObjectByName("Text");
 
